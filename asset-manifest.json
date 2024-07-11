@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/cal-pal/static/css/main.c368fc22.css",
+    "main.js": "/cal-pal/static/js/main.a025935a.js",
+    "static/js/592.e8cc2d1e.chunk.js": "/cal-pal/static/js/592.e8cc2d1e.chunk.js",
+    "static/media/calpal_logo.png": "/cal-pal/static/media/calpal_logo.3414bd30c7d3a336cf0f.png",
+    "index.html": "/cal-pal/index.html",
+    "main.c368fc22.css.map": "/cal-pal/static/css/main.c368fc22.css.map",
+    "main.a025935a.js.map": "/cal-pal/static/js/main.a025935a.js.map",
+    "592.e8cc2d1e.chunk.js.map": "/cal-pal/static/js/592.e8cc2d1e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.c368fc22.css",
+    "static/js/main.a025935a.js"
+  ]
+}
