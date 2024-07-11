@@ -16,7 +16,11 @@ const app = express();
 // Parse any request bodies into JSON instead of string.
 app.use(express.json());
 // Enable cross origin request from any origin.
-app.use(cors());
+const corsOptions = {
+  origin: 'https://AbdelrahmanAbudayyah.github.io/cal-pal',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+app.use(cors(corsOptions));
 app.use(
   session({
     secret: sessionInfo.secret,
