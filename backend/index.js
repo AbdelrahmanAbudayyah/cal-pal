@@ -25,7 +25,7 @@ app.use(
   })
 );
 
-const PORT = 2000;
+const PORT = process.env.PORT || 2000;
 
 // Set up the http requests.
 app.use('/auth', require('./services/auth.js'));
