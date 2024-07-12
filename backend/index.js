@@ -17,9 +17,9 @@ const app = express();
 app.use(express.json());
 // Enable cross origin request from any origin.
 const corsOptions = {
-  origin: 'https://abdelrahmanabudayyah.github.io',  // Use the base domain without the path
-  methods: ['GET', 'POST'],  // Specify the HTTP methods you want to allow
-  allowedHeaders: ['Content-Type'],
+    origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200
 };
 app.use(cors(corsOptions));
 
