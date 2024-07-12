@@ -21,7 +21,14 @@ const corsOptions = {
   methods: ['GET', 'POST'],  // Add methods you need to supporttt
   allowedHeaders: ['Content-Type'],
 }
-app.use(cors(corsOptions));
+//app.use(cors(corsOptions));
+
+app.use(function(req, res, next){
+  res.header("Acess-Control-Aloow-Origin", "*");
+  res.header("Acess-Control-Aloow-Headers", "Origin, X-requested-With, Content-Type, Accept");
+  next()
+});
+
 app.use(
   session({
     secret: sessionInfo.secret,
@@ -39,6 +46,8 @@ app.use("/calendar", require("./services/calendar.js"));
 app.use("/event", require("./services/event.js"));
 app.use("/event/type", require("./services/event_type.js"));
 app.use("/message", require("./services/message.js"));
+
+
 
 
 // Start listening.
