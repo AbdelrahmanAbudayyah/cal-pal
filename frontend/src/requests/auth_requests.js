@@ -1,4 +1,4 @@
-const uri = 'http://localhost:2000/auth';
+const uri = 'https://dashboard.heroku.com/apps/cal-pal/auth';
 // this gets so annoying to type
 const HEADERS = {
   headers: { 'Content-Type': 'application/json' }

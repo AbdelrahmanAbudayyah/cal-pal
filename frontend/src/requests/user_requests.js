@@ -1,5 +1,5 @@
 // address of our user api
-const uri = 'http://localhost:2000/user';
+const uri = 'https://dashboard.heroku.com/apps/cal-pal/user';
 // this gets so annoying to type
 const HEADERS = {
   headers: { 'Content-Type': 'application/json' }
