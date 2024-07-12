@@ -17,8 +17,8 @@ const app = express();
 app.use(express.json());
 // Enable cross origin request from any origin.
 const corsOptions = {
-  origin: 'https://AbdelrahmanAbudayyah.github.io/cal-pal',
-  methods: ['GET', 'POST'],  // Add methods you need to support
+  origin: 'https://AbdelrahmanAbudayyah.github.io/cal-pal',  
+  methods: ['GET', 'POST'],  // Add methods you need to supporttt
   allowedHeaders: ['Content-Type'],
 }
 app.use(cors(corsOptions));
