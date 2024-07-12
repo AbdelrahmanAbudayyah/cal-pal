@@ -30,7 +30,7 @@ function Messages() {
     const getThreads = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:2000/message/thread/userThreads/${currentUserId}`
+          `https://dashboard.heroku.com/apps/cal-pal/message/thread/userThreads/${currentUserId}`
         );
         setThreads(response.data);
       } catch (err) {
@@ -50,7 +50,7 @@ function Messages() {
   const displayThread = async (threadId) => {
     try {
       const response = await axios.get(
-        `http://localhost:2000/message/thread/${threadId}`
+        `https://dashboard.heroku.com/apps/cal-pal/message/thread/${threadId}`
       );
       setMessages(response.data.messages); // Update the messages state variable
 
@@ -64,7 +64,7 @@ function Messages() {
   const addUser = async () => {
     try {
       const response = await axios.get(
-        `http://localhost:2000/user/${userName}`
+        `https://dashboard.heroku.com/apps/cal-pal/user/${userName}`
       );
 
       if (response.data.success) {
@@ -89,7 +89,7 @@ function Messages() {
       const updatedAddedUsers = [...addedUsers, currentUserId];
 
       const response = await axios.post(
-        "http://localhost:2000/message/thread",
+        "https://dashboard.heroku.com/apps/cal-pal/message/thread",
         {
           name: threadName,
           group: updatedAddedUsers,
@@ -108,7 +108,7 @@ function Messages() {
   const createNewMessage = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:2000/message/thread/${selectedThread._id}`,
+        `https://dashboard.heroku.com/apps/cal-pal/message/thread/${selectedThread._id}`,
         {
           sender: currentUserName,
           text: message,

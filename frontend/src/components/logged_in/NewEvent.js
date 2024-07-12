@@ -30,7 +30,7 @@ function NewEvent() {
         try {
             const types = {};
             for (const id of calendars[calendar].event_types) {
-                const response = await fetch(`http://localhost:2000/event/type/${id}`, {
+                const response = await fetch(`https://dashboard.heroku.com/apps/cal-pal/event/type/${id}`, {
                     method: "GET"
                 });
                 types[id] = (await response.json()).event_type;
@@ -44,7 +44,7 @@ function NewEvent() {
     async function handleCreate(e) {
         e.preventDefault();
         try {
-            const response = await fetch("http://localhost:2000/event/", {
+            const response = await fetch("https://dashboard.heroku.com/apps/cal-pal/event/", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

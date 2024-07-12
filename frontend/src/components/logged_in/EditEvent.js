@@ -13,7 +13,7 @@ function EditEvent() {
         e.preventDefault();
 
         try {
-            const response = await fetch(`http://localhost:2000/event`, {
+            const response = await fetch(`https://dashboard.heroku.com/apps/cal-pal/event`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",

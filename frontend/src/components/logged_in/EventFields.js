@@ -9,7 +9,7 @@ function EventFields() {
     async function getEventTypeFields() {
         if (event.type) {
             try {
-                const response = await fetch(`http://localhost:2000/event/type/${event.type}`, {
+                const response = await fetch(`https://dashboard.heroku.com/apps/cal-pal/event/type/${event.type}`, {
                     method: "GET"
                 });
                 const data = await response.json();

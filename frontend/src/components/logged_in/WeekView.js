@@ -198,7 +198,7 @@ function Event({ event }) {
     async function handleDeleteClick() {
         if (confirmDelete) {
             try {
-                await fetch("http://localhost:2000/event", {
+                await fetch("https://dashboard.heroku.com/apps/cal-pal/event", {
                     method: "DELETE",
                     headers: {
                         "Content-Type": "application/json",

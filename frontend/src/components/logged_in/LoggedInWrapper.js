@@ -29,7 +29,7 @@ const LoggedInWrapper = () => {
     try {
       const newCalendars = {};
       for (const id of userState.calendars) {
-        const response = await fetch(`http://localhost:2000/calendar/${id}`, {
+        const response = await fetch(`https://dashboard.heroku.com/apps/cal-pal/calendar/${id}`, {
           method: "GET"
         });
         const calendar = (await response.json()).calendar;
