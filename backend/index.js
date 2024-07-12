@@ -17,17 +17,13 @@ const app = express();
 app.use(express.json());
 // Enable cross origin request from any origin.
 const corsOptions = {
-  origin: 'https://AbdelrahmanAbudayyah.github.io/cal-pal',  
-  methods: ['GET', 'POST'],  // Add methods you need to supporttt
+  origin: 'https://abdelrahmanabudayyah.github.io',  // Use the base domain without the path
+  methods: ['GET', 'POST'],  // Specify the HTTP methods you want to allow
   allowedHeaders: ['Content-Type'],
-}
-//app.use(cors(corsOptions));
+};
+app.use(cors(corsOptions));
 
-app.use(function(req, res, next){
-  res.header("Acess-Control-Aloow-Origin", "*");
-  res.header("Acess-Control-Aloow-Headers", "Origin, X-requested-With, Content-Type, Accept");
-  next()
-});
+
 
 app.use(
   session({
