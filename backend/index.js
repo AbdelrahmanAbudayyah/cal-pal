@@ -18,7 +18,8 @@ app.use(express.json());
 // Enable cross origin request from any origin.
 const corsOptions = {
   origin: 'https://AbdelrahmanAbudayyah.github.io/cal-pal',
-  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+  methods: ['GET', 'POST'],  // Add methods you need to support
+  allowedHeaders: ['Content-Type'],
 }
 app.use(cors(corsOptions));
 app.use(
